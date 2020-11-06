@@ -1,6 +1,17 @@
 var timerEl = document.querySelector("#timer");
 var welcomeEl = document.querySelector("#welcome-screen");
 var startEl = document.querySelector("#start-button");
+var questScrnEl=document.querySelector("#queston-screen");
+var bodyEl=document.querySelector("#body");
+var qScreenE1=document.querySelector("#question-screen");
+
+
+bodyEl.onload = function(){
+
+    qScreenE1.style.display ="none";
+};
+
+
 
 // need to have a button that starts the quiz and the timer. the start button should hide the welcome screen
 var timer = 60;
@@ -16,7 +27,7 @@ startEl.addEventListener("click", function () {
 
 
 function startClock() {
-    var timeLeft = 60;
+    var timeLeft = 70;
     var timeInterval = setInterval(function () {
         timerEl.textContent = timeLeft;
         timeLeft--;
@@ -32,21 +43,6 @@ function startClock() {
 };
 
 
-// function prepareRead() {
-//     var timeLeft = 5;
-
-//     var timeInterval = setInterval(function() {
-//       timerEl.textContent = timeLeft + " seconds remaining";
-//       timeLeft--;
-
-//       if (timeLeft === 0) {
-//         timerEl.textContent = "";
-//         speedRead();
-//         clearInterval(timeInterval);
-//       }
-
-//     }, 1000);
-//   }
 
 
 
