@@ -4,11 +4,27 @@ var startEl = document.querySelector("#start-button");
 var questScrnEl=document.querySelector("#queston-screen");
 var bodyEl=document.querySelector("#body");
 var qScreenE1=document.querySelector("#question-screen");
+var mainQuestEl=document.querySelector("#question");
+var but1El=document.querySelector("#but1");
+var but1E2=document.querySelector("#but2");
+var but1E3=document.querySelector("#but3");
+var but1E4=document.querySelector("#but4");
+var responseEl=document.querySelector("#response");
+var initialsEl=document.querySelector("#initials");
+var highScoreEl=document.querySelector("#high-score");
+var scoreScrnEl=document.querySelector("#score-screen");
+var yourScoreEl=document.querySelector("#your-score");
+var formEl=document.querySelector("#form");
+
+
+
 
 
 bodyEl.onload = function(){
 
     qScreenE1.style.display ="none";
+    scoreScrnEl.style.display ="none";
+    
 };
 
 
@@ -25,7 +41,7 @@ startEl.addEventListener("click", function () {
 
 });
 
-
+// need to set up the timer. timer should end the game at 0
 function startClock() {
     var timeLeft = 70;
     var timeInterval = setInterval(function () {
@@ -52,7 +68,7 @@ function startClock() {
 
 
 
-// need to set up the timer. timer should end the game at 0
+
 
 
 // need to have a way to click on an answer from the list and check to see if it is correct. time should be adjusted if correct or incorrect.
