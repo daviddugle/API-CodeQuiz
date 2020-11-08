@@ -16,3 +16,4 @@ https://daviddugle.github.io/API-CodeQuiz/
 *got the questions to hide when the page loads. I plan on having them to call to display block when I start calling the questons.
 *set the document query parameters for the html in js
 *entire skeleton is set up for the main page.
+*think I started to get the object array figured out.
