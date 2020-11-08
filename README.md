@@ -9,6 +9,8 @@ Link to deployed site
 https://daviddugle.github.io/API-CodeQuiz/
 
 
+
+
 *set up initial files
 *pseudo coded the pages that will be used
 *got the first page welcome screen up
@@ -17,3 +19,7 @@ https://daviddugle.github.io/API-CodeQuiz/
 *set the document query parameters for the html in js
 *entire skeleton is set up for the main page.
 *think I started to get the object array figured out.
+
+https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-08%20173743.jpg
+https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-08%20173812.jpg
+
