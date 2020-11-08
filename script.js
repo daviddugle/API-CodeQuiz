@@ -43,10 +43,10 @@ startEl.addEventListener("click", function () {
     startClock();
 
 });
-
+var timeLeft = 70;
 // need to set up the timer. timer should end the game at 0
 function startClock() {
-    var timeLeft = 70;
+    
     var timeInterval = setInterval(function () {
         timerEl.textContent = timeLeft;
         timeLeft--;
@@ -78,17 +78,17 @@ var quizQuests = [
     },
     {
         q: "A very useful tool used during development and debugging for printing to the debugger is?",
-        choices: ["Javascript","terminal bath","for loops","console log"],
+        choices: ["Javascript", "terminal bath", "for loops", "console log"],
         answerIndex: 3
     },
     {
         q: "The condition if or if/else statement is enclosed within?",
-        choices: ["quotes","curly brackets","parenthesis","square brackets"],
-        answerIndex: 1
+        choices: ["quotes", "curly brackets", "parenthesis", "square brackets"],
+        answerIndex: 2
     },
     {
         q: "Arrays in JavaScript can be used to store _____.",
-        choices: ["numbers and strings","other arrays","booleans","all of the above"],
+        choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
         answerIndex: 3
     }];
 
@@ -100,7 +100,7 @@ function displayQuestion() {
     quizQuests[currentQuestionIndex].answerIndex;
     qScreenE1.style.display = "block";
     qScreenE1.textContent = currentQuestion;
-   
+
 
     var li1El = document.createElement("li");
     qScreenE1.appendChild(li1El);
@@ -128,7 +128,49 @@ function displayQuestion() {
     li1El.textContent = quizQuests[currentQuestionIndex].choices[3];
     var br1El = document.createElement("br");
     li1El.appendChild(br1El);
- 
+
+
+    // let us check for the answer selection
+    li1El.addEventListener("click", function(event) {
+        event.preventDefault();
+        
+          
+          var answer = quizQuests.choices[event.target.id];
+
+          if (answer !== quizQuests.answerIndex){
+            clearInterval(timeLeft);
+            timeLeft-10;
+
+
+          }
+          
+        
+      });
+
+
+
+
+};
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    qScreenE1.style.display = "none";
+
+    if (currentQuestionIndex <= 3) {
+
+
+
+        displayQuestion();
+    }
+    else {
+
+
+
+
+        scoreTracker();
+    }
+
+
 
 }
 

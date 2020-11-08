@@ -19,6 +19,9 @@ https://daviddugle.github.io/API-CodeQuiz/
 *set the document query parameters for the html in js
 *entire skeleton is set up for the main page.
 *think I started to get the object array figured out.
+*adjustments made to the high score page.
+
+
 
 https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-08%20173743.jpg
 https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-08%20173812.jpg
