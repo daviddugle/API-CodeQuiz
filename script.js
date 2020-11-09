@@ -5,10 +5,10 @@ var questScrnEl = document.querySelector("#queston-screen");
 var bodyEl = document.querySelector("#body");
 var qScreenE1 = document.querySelector("#question-screen");
 var mainQuestEl = document.querySelector("#question");
-var but1El = document.querySelector("#but1");
-var but1E2 = document.querySelector("#but2");
-var but1E3 = document.querySelector("#but3");
-var but1E4 = document.querySelector("#but4");
+// var but1El = document.querySelector("#but1");
+// var but1E2 = document.querySelector("#but2");
+// var but1E3 = document.querySelector("#but3");
+// var but1E4 = document.querySelector("#but4");
 var responseEl = document.querySelector("#response");
 var initialsEl = document.querySelector("#initials");
 var highScoreEl = document.querySelector("#high-score");
@@ -54,6 +54,7 @@ function startClock() {
         if (timeLeft <= 0) {
             timerEl.textContent = "";
             clearInterval(timeInterval);
+            scoreTracker();
         }
 
 
@@ -100,9 +101,9 @@ function displayQuestion() {
     quizQuests[currentQuestionIndex].answerIndex;
     qScreenE1.style.display = "block";
     qScreenE1.textContent = currentQuestion;
+   
 
-
-    var li1El = document.createElement("li");
+      var li1El = document.createElement("li");
     qScreenE1.appendChild(li1El);
     li1El.textContent = quizQuests[currentQuestionIndex].choices[0];
     var br1El = document.createElement("br");
@@ -134,8 +135,10 @@ function displayQuestion() {
     li1El.addEventListener("click", function(event) {
         event.preventDefault();
         
-          
-          var answer = quizQuests.choices[event.target.id];
+        var target = event.target.textContent;
+        console.log(target);
+          var answer = quizQuests.answerIndex[currentQuestionIndex];
+          console.log(answer)
 
           if (answer !== quizQuests.answerIndex){
             clearInterval(timeLeft);
@@ -169,6 +172,37 @@ function nextQuestion() {
 
         scoreTracker();
     }
+    
+
+
+}
+
+function scoreTracker(){
+
+    qScreenE1.style.display = "none";
+    scoreScrnEl.style.display = "block";
+
+
+
+    highScoreEl.addEventListener("click", function(event){
+        event.preventDefault();
+
+        var playerOne = document.querySelector("#initialsEl");
+        timeLeft=timeLeft.value;
+
+        localStorage.getItem("score");
+        localStorage.getItem("playerOne");
+
+        localStorage.setItem("score", timeLeft);
+        localStorage.setItem("playerOne", playerOne);
+        window.location.href="HighScore.html";
+
+
+
+    })
+
+
+
 
 
 

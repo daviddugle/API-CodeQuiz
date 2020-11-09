@@ -20,9 +20,10 @@ https://daviddugle.github.io/API-CodeQuiz/
 *entire skeleton is set up for the main page.
 *think I started to get the object array figured out.
 *adjustments made to the high score page.
+*score page loads at the end of the timer
 
 
 
-https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-08%20173743.jpg
-https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-08%20173812.jpg
+![First Image](https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-08%20173743.jpg)
+![Second Image](https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-08%20173812.jpg)
 
