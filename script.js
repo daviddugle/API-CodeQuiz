@@ -44,10 +44,11 @@ startEl.addEventListener("click", function () {
 
 });
 var timeLeft = 70;
+var timeInterval
 // need to set up the timer. timer should end the game at 0
 function startClock() {
     
-    var timeInterval = setInterval(function () {
+        timeInterval = setInterval(function () {
         timerEl.textContent = timeLeft;
         timeLeft--;
 
@@ -102,59 +103,58 @@ function displayQuestion() {
     qScreenE1.style.display = "block";
     qScreenE1.textContent = currentQuestion;
    
-
-      var li1El = document.createElement("li");
-    qScreenE1.appendChild(li1El);
-    li1El.textContent = quizQuests[currentQuestionIndex].choices[0];
-    var br1El = document.createElement("br");
-    li1El.appendChild(br1El);
-
-
-    var li1El = document.createElement("li");
-    qScreenE1.appendChild(li1El);
-    li1El.textContent = quizQuests[currentQuestionIndex].choices[1];
-    var br1El = document.createElement("br");
-    li1El.appendChild(br1El);
+    for (let i = 0; i < quizQuests[currentQuestionIndex].choices.length; i++) {
+        var li1El = document.createElement("li");
+        li1El.textContent = quizQuests[currentQuestionIndex].choices[i];
+        li1El.setAttribute("data-answer", i)
+        qScreenE1.appendChild(li1El);
+        
+        
+    }
 
 
-    var li1El = document.createElement("li");
-    qScreenE1.appendChild(li1El);
-    li1El.textContent = quizQuests[currentQuestionIndex].choices[2];
-    var br1El = document.createElement("br");
-    li1El.appendChild(br1El);
+    // var li1El = document.createElement("li");
+    // qScreenE1.appendChild(li1El);
+    // li1El.textContent = quizQuests[currentQuestionIndex].choices[1];
+    // var br1El = document.createElement("br");
+    // li1El.appendChild(br1El);
 
 
-    var li1El = document.createElement("li");
-    qScreenE1.appendChild(li1El);
-    li1El.textContent = quizQuests[currentQuestionIndex].choices[3];
-    var br1El = document.createElement("br");
-    li1El.appendChild(br1El);
+    // var li1El = document.createElement("li");
+    // qScreenE1.appendChild(li1El);
+    // li1El.textContent = quizQuests[currentQuestionIndex].choices[2];
+    // var br1El = document.createElement("br");
+    // li1El.appendChild(br1El);
+
+
+    // var li1El = document.createElement("li");
+    // qScreenE1.appendChild(li1El);
+    // li1El.textContent = quizQuests[currentQuestionIndex].choices[3];
+    // var br1El = document.createElement("br");
+    // li1El.appendChild(br1El);
 
 
     // let us check for the answer selection
-    li1El.addEventListener("click", function(event) {
-        event.preventDefault();
-        
-        var target = event.target.textContent;
-        console.log(target);
-          var answer = quizQuests.answerIndex[currentQuestionIndex];
-          console.log(answer)
-
-          if (answer !== quizQuests.answerIndex){
-            clearInterval(timeLeft);
-            timeLeft-10;
-
-
-          }
-          
-        
-      });
-
-
-
-
+    
+    
+    
+    
 };
 
+qScreenE1.addEventListener("click", function(event) {
+    if(event.target.matches("li")){
+    console.log(event.target)
+    var target = parseInt(event.target.getAttribute("data-answer"))
+    console.log(target);
+      var answer = quizQuests[currentQuestionIndex].answerIndex;
+      console.log(answer, target)
+      if (answer !== target){   
+        
+        timeLeft= timeLeft-10;
+      }
+    nextQuestion()
+    } else return
+  });
 function nextQuestion() {
     currentQuestionIndex++;
     qScreenE1.style.display = "none";
