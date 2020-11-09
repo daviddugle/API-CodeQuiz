@@ -2,8 +2,12 @@
 
 var highScoreEl = document.querySelector("#high-scores");
 
+var playerOne = localStorage.getItem("playerOne");
 
 
+var li1El = document.createElement("li");
+        li1El.textContent = playerOne;
+        highScoreEl.appendChild(li1El);
 
 
 

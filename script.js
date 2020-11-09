@@ -169,14 +169,29 @@ function scoreTracker(){
     highScoreEl.addEventListener("click", function(event){
         event.preventDefault();
 
-        var playerOne = document.querySelector("#initialsEl");
-        timeLeft=timeLeft.value;
+        // var playerOne = document.querySelector("#initialsEl");
+        // var finalScore=document.querySelector("#timerEl");
+        // // timeLeft=timeLeft.value;
+        // console.log(finalScore);
 
-        localStorage.getItem("score");
-        localStorage.getItem("playerOne");
+        // localStorage.getItem("score");
+        // localStorage.getItem("playerOne");
 
-        localStorage.setItem("score", timeLeft);
-        localStorage.setItem("playerOne", playerOne);
+        // localStorage.setItem("score", finalScore);
+        // localStorage.setItem("playerOne", playerOne);
+
+        var playerOne ={
+            playInit: initialsEl.value.trim(),
+            score: timeLeft.value
+        };
+
+        console.log(playerOne);
+        localStorage.setItem("playerOne", JSON.stringify(playerOne));
+
+
+
+
+
         window.location.href="HighScore.html";
 
 
