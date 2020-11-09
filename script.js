@@ -182,7 +182,7 @@ function scoreTracker(){
 
         var playerOne ={
             playInit: initialsEl.value.trim(),
-            score: timeLeft.value
+            score: timeLeft
         };
 
         console.log(playerOne);

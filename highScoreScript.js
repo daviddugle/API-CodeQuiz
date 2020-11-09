@@ -2,11 +2,14 @@
 
 var highScoreEl = document.querySelector("#high-scores");
 
-var playerOne = localStorage.getItem("playerOne");
+
+var playerOne = JSON.parse(localStorage.getItem("playerOne"));
+var userInit = playerOne.playInit;
+var userScore= playerOne.score;
 
 
 var li1El = document.createElement("li");
-        li1El.textContent = playerOne;
+        li1El.textContent = (userInit + " " + userScore);
         highScoreEl.appendChild(li1El);
 
 
