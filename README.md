@@ -21,6 +21,7 @@ https://daviddugle.github.io/API-CodeQuiz/
 *think I started to get the object array figured out.
 *adjustments made to the high score page.
 *score page loads at the end of the timer
+*event listener working
 
 
 
