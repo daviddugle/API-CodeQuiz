@@ -2,6 +2,8 @@
 
 I got super lost and have to go back and reveiew the entire week. I will sumbit what I have and hopefully can update it this weekend. Otherwise I will have to ask for a re-grade because I have hit a wall.
 
+This is the toughest one yet. The event listener really gave me a hard time. I also struggled with the score, made it way harder than it needed to be. Once the items were stored into the local storage I was home free.
+
 
 
 
@@ -27,4 +29,6 @@ https://daviddugle.github.io/API-CodeQuiz/
 
 ![First Image](https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-08%20173743.jpg)
 ![Second Image](https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-08%20173812.jpg)
+![Third Image](https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-09%20151442.jpg)
+![Forth Image](https://github.com/daviddugle/API-CodeQuiz/blob/main/Assets/Screenshot%202020-11-09%20161312.jpg)
 
